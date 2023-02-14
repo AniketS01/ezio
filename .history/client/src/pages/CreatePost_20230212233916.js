@@ -17,7 +17,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const res = await fetch('https://ezio.onrender.com/api/dalle', {
+        const res = await fetch('http://localhost:8000/api/dalle', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const res = await fetch('https://ezio.onrender.com/api/post', {
+        const res = await fetch('http://localhost:8000/api/post', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

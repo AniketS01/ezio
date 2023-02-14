@@ -19,7 +19,7 @@ const Home = () => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const res = await fetch('https://ezio.onrender.com/api/post', {
+        const res = await fetch('http://localhost:8000/api/post', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
